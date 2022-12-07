@@ -24,7 +24,7 @@ streamlit.dataframe(fruit_to_show)
 def get_fruitvice_data(this_is_fruit_choice):
       fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-       return fruityvice_normalized
+      return fruityvice_normalized
 
 streamlit.header("Fruityvice Fruit Advice!")
 try:
